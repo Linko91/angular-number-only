@@ -1,0 +1,27 @@
+{
+  "name": "angular-number-only",
+  "version": "0.1.0",
+  "main": "angular-number-only.js",
+  "homepage": "https://github.com/Linko91/angular-number-only",
+  "authors": [
+    "Davide Di Modica <webmaster.ddm@gmail.com>"
+  ],
+  "description": "Angular number-only directive",
+  "keywords": [
+    "angular",
+    "number",
+    "numeric",
+    "directive"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.3.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
