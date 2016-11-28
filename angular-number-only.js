@@ -7,7 +7,7 @@
 \_______)|_||_| |_||_| \_) \___/ 
                                       
 
- * angular-number-only v0.1.0
+ * angular-number-only v0.1.1
  * Angular number-only directive 
  *
  * http://ddmweb.it/
@@ -27,10 +27,21 @@
 	.directive('numberOnlyPositive', function () {
         return {
             require: '?ngModel',
+            restrict: 'A',
+            scope: { 
+                noZero : '@',
+            },
             link: function (scope, element, attr, ngModelCtrl) {
+                var noZero = scope.noZero !== undefined;
+
                 function check(text) {
                     if (text) {
-                        var transformedInput = text.replace(/[^0-9]+/gim, '');
+                        var transformedInput = text.toString().replace(/[^0-9]+/gim, '');
+                        if(noZero){
+                            transformedInput = parseInt(transformedInput);
+                            if(transformedInput === 0) transformedInput = '';
+                        }
+
                         if (transformedInput !== text) {
                             ngModelCtrl.$setViewValue(transformedInput);
                             ngModelCtrl.$render();

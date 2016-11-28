@@ -1,6 +1,6 @@
 # angular-number-only
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Bower version](https://img.shields.io/badge/bower-0.1.0-blue.svg)
+![Bower version](https://img.shields.io/badge/bower-0.1.1-blue.svg)
 
 
 Angular number-only directive
@@ -9,7 +9,7 @@ Angular number-only directive
 
 ### Several quick start options are available:
 
-* [Download the latest release](https://github.com/Linko91/angular-number-only/archive/0.1.0.zip).
+* [Download the latest release](https://github.com/Linko91/angular-number-only/archive/0.1.1.zip).
 * Clone the repo: `git clone https://github.com/Linko91/angular-number-only.git`.
 * Install with [Bower](http://bower.io): `bower install angular-number-only --save`.
 * Download [minified](https://raw.githubusercontent.com/Linko91/angular-number-only/master/angular-number-only.min.js).
@@ -30,7 +30,7 @@ angular.module('MyApp', ['angular-number-only']);
 ```
  - Add a `number-only-positive` attribute to your `<input>` tag
 ```html
-<input number-only-positive>
+<input number-only-positive [no-zero]>
 ```
 
 
